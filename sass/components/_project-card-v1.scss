@@ -1,0 +1,82 @@
+.project-card {
+  background-color: var(--color-primary-dark);
+  border-radius: 1.5rem;
+  padding: 0.25rem;
+  height: 100%;
+  //   max-height: 25.85rem;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  display: grid;
+  grid-template-rows: 1fr auto !important;
+  grid-template-columns: 100%;
+
+  &__img {
+    height: 100%;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    img {
+      @include fullImg;
+      max-height: 100%;
+    }
+  }
+
+  &__info {
+    padding: 1rem 1.2rem;
+    @include center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.15rem;
+    height: fit-content;
+    // background-color: red;
+
+    h3 {
+      font-family: "Chiq Pro";
+      font-size: 1.35rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    li {
+      color: #616161;
+      font-family: Gilroy;
+      font-size: 0.85rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      span {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    height: 50vh;
+    max-height: none;
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+
+    &__info {
+      padding: 0.75rem 0.5rem;
+      gap: 1rem;
+    }
+
+    &:hover {
+      border-color: var(--color-primary);
+    }
+  }
+}

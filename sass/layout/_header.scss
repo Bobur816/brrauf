@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  margin-top: 2rem;
+  transition: all 0.3s;
+  @include center;
+  background-color: #ffffff;
+  // background: linear-gradient(0deg, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.55) 100%);
+  &__wrapper {
+    // height: 5.35rem;
+    @include spaced;
+    position: relative;
+
+    .btn_yellow {
+      height: 2.6rem;
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 101%; /* 18.18px */
+    }
+  }
+
+  &__logo {
+    height: 2.5rem;
+    transition: all 0.3s;
+    // @include center;
+    img {
+      height: 100%;
+    }
+  }
+
+  &__navigation {
+    @include spaced;
+    gap: 1rem;
+    margin-left: 3rem;
+
+    &__link {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 101%; /* 16.16px */
+      transition: all 0.3s;
+
+      &:hover,
+      &.active {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__actions {
+    @include spaced;
+    gap: 1.5rem;
+
+    .call-form__open {
+      height: 2.5rem;
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 2.5rem;
+
+      i {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__mobile {
+    &__btns {
+      height: 100%;
+      width: 100%;
+      @include spaced;
+      display: none;
+    }
+    &__btn {
+      border: 1px solid var(--color-primary);
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      @include center;
+
+      .icon {
+        max-width: 60%;
+        @include center;
+        svg {
+          max-width: 90%;
+          transition: all 0.3s;
+        }
+      }
+
+      &:hover {
+        background-color: var(--color-primary);
+
+        & .icon svg {
+          fill: var(--color-white);
+        }
+      }
+    }
+  }
+
+  &.header__scrolled {
+    height: 4rem;
+    // background-color: rgba(0, 0, 0, 0.493);
+    background-color: var(--color-white);
+    box-shadow: 0 -50px 70px 10px var(--color-gray);
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    // height: 6rem;
+
+    &__actions {
+      display: none;
+    }
+
+    &__logo {
+      position: absolute;
+      @include absCenter;
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+    &__mobile {
+      &__btns {
+        display: flex;
+      }
+    }
+  }
+}

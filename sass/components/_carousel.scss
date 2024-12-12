@@ -1,0 +1,225 @@
+.carousel {
+  &__services {
+    // height: fit-content;
+    position: relative;
+    height: 22rem;
+    margin-top: 2rem;
+
+    .carousel__controls {
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      top: -6.2rem;
+      bottom: auto;
+      right: 0;
+      z-index: 2;
+
+      button {
+        height: 3rem;
+        width: 3rem;
+        @include center;
+
+        i {
+          font-size: 0.7rem;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+
+  &__testimonials {
+    padding-bottom: 0;
+
+    .carousel__item {
+      @include trans;
+      // background-color: red;
+      box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      border-radius: 1.5rem;
+
+      @media (max-width: 768px) {
+        padding: 1rem;
+        gap: 1.5rem;
+      }
+
+      &__text {
+        padding-right: 5rem;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6rem; /* 160% */
+
+        @media (max-width: 768px) {
+          line-height: 1.4rem;
+          padding-right: 2rem;
+        }
+      }
+
+      &__info {
+        // background-color: yellow;
+        @include spaced;
+
+        img {
+          height: 3rem;
+        }
+
+        &_left {
+          display: flex;
+          gap: 0.75rem;
+          align-items: center;
+          h5 {
+            font-family: "Euclid Square";
+            font-size: 0.9rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+
+        &_right {
+          // background-color: red;
+          width: 2.2rem;
+          aspect-ratio: 1/1;
+        }
+
+        &_stars {
+          display: flex;
+          gap: 0.2rem;
+          margin-top: 0.2rem;
+          i {
+            font-size: 0.7rem;
+            color: var(--color-yellow);
+          }
+        }
+      }
+
+      &:hover {
+        background-color: #435c254d;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 2rem !important;
+      width: fit-content !important;
+      left: 50% !important;
+      transform: translateX(-50%);
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #eaeaea;
+      opacity: 1;
+      &-active {
+        background-color: var(--color-primary);
+      }
+    }
+
+    .carousel__controls {
+      // height: 6rem;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      bottom: 0.5rem;
+      right: 0;
+      z-index: 2;
+
+      button {
+        height: 3rem;
+        width: 3rem;
+        @include center;
+
+        i {
+          font-size: 0.7rem;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+
+  &__controls {
+    // height: 6rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    bottom: 0.5rem;
+    right: 0;
+    z-index: 2;
+
+    button {
+      height: 3rem;
+      width: 3rem;
+      @include center;
+
+      i {
+        font-size: 0.7rem;
+        line-height: 100%;
+      }
+    }
+  }
+
+  // ______________________
+
+  &__projects {
+    width: 100%;
+    height: 100%;
+    max-height: 31rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+  }
+
+  &__vacancy {
+    width: 100%;
+    height: 100%;
+    max-height: 31rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    &__services {
+      .carousel__controls {
+        width: fit-content;
+        height: fit-content;
+        top: auto;
+        bottom: -6rem;
+        @include absCenterX;
+        right: 0;
+        z-index: 2;
+      }
+    }
+
+    &__testimonials {
+      .swiper-pagination {
+        display: none;
+      }
+      .carousel__controls {
+        justify-content: center;
+      }
+    }
+
+    // ____________________
+
+    &__projects {
+      margin-top: 2rem;
+      overflow: visible;
+    }
+
+    &__vacancy {
+      overflow: visible;
+    }
+  }
+}
