@@ -7,8 +7,7 @@
   display: none;
   .overlay {
     @include fullImg;
-    background-color: rgba(48, 68, 31, 0.6);
-    // @include center;
+    background-color: hsla(206, 77%, 21%, 0.76);
   }
 
   &.successful {
@@ -42,7 +41,7 @@
   }
 
   &__close {
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
     position: absolute;
     top: -3.7rem;
     @include absCenterX;
@@ -114,7 +113,7 @@
     input {
       height: 3.5rem;
       width: 100%;
-      border-radius: 0.5rem;
+      border-radius: 5rem;
       border: none;
       outline: none;
       background-color: transparent;
@@ -142,7 +141,7 @@
       height: 3.5rem;
       background-color: var(--color-primary);
       color: var(--color-white);
-      border-radius: 0.5rem;
+      border-radius: 5rem;
     }
 
     p {

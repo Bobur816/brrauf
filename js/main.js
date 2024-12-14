@@ -82,6 +82,13 @@ $(window).on("load", () => {
   //   }, 700);
   // });
 
+  // ______________________________filter-dropdown_________________________________
+
+  $(".filter-dropdown button").on("click", function (e) {
+    $(this).parent().find(".filter-dropdown__body").slideToggle(300);
+    $(this).parent().toggleClass("active");
+  });
+
   $(".popup").click((e) => {
     let div = $(".popup__wrapper");
     if (!div.is(e.target) && div.has(e.target).length === 0) {
@@ -93,72 +100,14 @@ $(window).on("load", () => {
     }
   });
 
-  // ______________________________popup - big_________________________________
+  // ______________________________mobile filter_________________________________
 
-  // function hidePopup() {
-  //   $(".popup-big__wrapper").removeClass("active");
-  //   $(".wrapper__success").removeClass("active");
-  //   setTimeout(() => {
-  //     $(".popup-big").fadeOut(400);
-  //   }, 500);
-  // }
-
-  // function showPopupFrom() {
-  //   $(".vacancy-form").fadeIn(400);
-  //   setTimeout(() => {
-  //     $(".wrapper__vacancy").addClass("active");
-  //   }, 200);
-  // }
-  // function fadeOutPopupForm() {
-  //   $(".vacancy-form").fadeOut(400);
-  //   setTimeout(() => {
-  //     $(".wrapper__vacancy").removeClass("active");
-  //   }, 1000);
-  // }
-
-  // function fadeInPopupSuccess() {
-  //   $(".wrapper__success").addClass("active");
-  //   setTimeout(() => {
-  //     $(".successful-popup-big").fadeIn(400);
-  //   }, 500);
-  // }
-
-  // $(".vacancy-form__open").on("click", function () {
-  //   showPopupFrom();
-  // });
-
-  // $(".popup-big__close").on("click", function () {
-  //   hidePopup();
-  // });
-
-  // $(".popup-big__form").on("submit", function (e) {
-  //   e.preventDefault();
-  //   fadeOutPopupForm();
-  //   fadeInPopupSuccess();
-  //   setTimeout(() => {
-  //     $(".popup-big__form input").val("");
-  //   }, 700);
-  // });
-
-  // $(".feedback__form").on("submit", function (e) {
-  //   e.preventDefault();
-
-  //   $(".successful").fadeIn(300);
-  //   setTimeout(() => {
-  //     $(".feedback__form input").val("");
-  //   }, 700);
-  // });
-
-  // $(".popup-big").click((e) => {
-  //   let div = $(".popup-big__wrapper");
-  //   if (!div.is(e.target) && div.has(e.target).length === 0) {
-  //     hidePopup();
-
-  //     setTimeout(() => {
-  //       $(".popup-big__form input").val("");
-  //     }, 700);
-  //   }
-  // });
+  $(".filter-mobile__open").on("click", function () {
+    $(".filter-mobile").slideDown(400);
+  });
+  $(".filter-mobile__close").on("click", function () {
+    $(".filter-mobile").slideUp(400);
+  });
 
   // ______________________________language_________________________________
 
@@ -172,27 +121,12 @@ $(window).on("load", () => {
     $(this).slideToggle(400);
   });
 
-  // ___________________file-input_____________________
-  // const fileInput = document.getElementById("fileInput");
-  // const fileName = document.querySelector(".file-name");
-  // const fileLabel = document.querySelector(".custom-file-label");
+  // ______________________________cards-show__more-btn_________________________________
 
-  // // Fayl tanlanganida nomini yangilash
-  // $(fileInput).on("change", function () {
-  //   if (fileInput.files.length > 0) {
-  //     fileName.textContent = fileInput.files[0].name;
-  //   } else {
-  //     fileName.textContent = "Прикрепить файл";
-  //   }
-  // });
-
-  // $(".phone-format").inputmask({
-  //   mask: "+998 (99) 999-99-99",
-  // });
+  $(".cards-show__more-btn").on("click", function () {
+    $(this).parent().hide();
+    $(this).parent().parent().find(".for__more").show();
+  });
 
   $(".form_tel").inputmask("+\\9\\98 99 999 99 99");
-
-  // $("#fullpage").fullpage();
-
-  // let rellax = new Rellax(".rellax");
 });

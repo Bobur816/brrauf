@@ -1,5 +1,5 @@
 $(window).on("load", () => {
-  const services = new Swiper(".carousel__services", {
+  const products = new Swiper(".carousel__products", {
     loop: true,
     spaceBetween: 30,
     fadeEffect: {
@@ -26,7 +26,40 @@ $(window).on("load", () => {
         // spaceBetween: 40,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 4,
+        // spaceBetween: 40,
+      },
+    },
+  });
+
+  const news = new Swiper(".carousel__news", {
+    loop: true,
+    spaceBetween: 30,
+    fadeEffect: {
+      crossFade: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".news__carousel-next",
+      prevEl: ".news__carousel-prev",
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      400: {
+        slidesPerView: 1.2,
+        // spaceBetween: 10,
+      },
+      600: {
+        slidesPerView: 2,
+        // spaceBetween: 40,
+      },
+      768: {
+        slidesPerView: 4,
         // spaceBetween: 40,
       },
     },
@@ -82,6 +115,24 @@ $(window).on("load", () => {
       768: {
         slidesPerView: 2,
       },
+    },
+  });
+
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const swiper2 = new Swiper(".mySwiper2", {
+    // spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
     },
   });
 });

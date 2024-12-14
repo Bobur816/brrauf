@@ -11,12 +11,16 @@
 @import "components/popup";
 @import "components/language";
 @import "components/carousel";
-@import "components/service-card";
+@import "components/product-card";
 @import "components/partners-grid";
 @import "components/pagination";
-@import "components/order-form";
-@import "components/callback";
+@import "components/news-card";
+@import "components/navigator";
+@import "components/filter";
+@import "components/filter-prices";
+@import "components/mobile-filter";
 
+// @import "components/callback";
 // @import "components/modal";
 // @import "components/vacancy-card";
 // @import "components/feedback-form";
@@ -32,8 +36,8 @@
 
 @import "pages/home";
 @import "pages/about";
-@import "pages/projects";
+@import "pages/products";
+@import "pages/product-single";
 @import "pages/news";
-@import "pages/services-page";
-@import "pages/single";
-@import "pages/contacts";
+
+// @import "pages/contacts";

@@ -20,8 +20,8 @@
     border: 1px solid var(--color-primary);
 
     &:hover {
-      background-color: var(--color-white);
-      color: var(--color-primary-black);
+      background-color: var(--color-primary);
+      color: var(--color-white);
     }
   }
 
@@ -32,6 +32,48 @@
     &:hover {
       background-color: var(--color-primary);
       color: var(--color-white);
+    }
+  }
+
+  &_mobile-nav {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    padding: 1.2rem 0;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  &_yellow {
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+    border: 1px solid var(--color-yellow);
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--color-yellow);
+      color: var(--color-yellow);
+    }
+  }
+
+  &_100 {
+    padding: 0.75rem 0;
+  }
+
+  &_yellow-carousel {
+    border-radius: 50%;
+    border: 1px solid var(--color-yellow);
+
+    i {
+      color: var(--color-yellow);
+    }
+
+    &:hover {
+      background-color: var(--color-yellow);
+
+      i {
+        color: var(--color-white);
+      }
     }
   }
 }

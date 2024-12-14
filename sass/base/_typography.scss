@@ -24,21 +24,17 @@
 }
 
 .section__title {
+  // color: #2a2a2a;
   color: var(--color-primary);
-  font-family: Manrope;
-  font-size: 3rem;
-  font-style: normal;
+  font-family: "TT Firs Neue";
+  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 4rem; /* 133.333% */
 }
 
-.section__title_mini {
-  font-family: "Euclid Square";
-  font-size: 0.9rem;
-  font-style: normal;
+.section__title_big {
+  color: var(--color-primary);
+  font-size: 3.6rem;
   font-weight: 400;
-  line-height: 101%; /* 18.18px */
-  text-transform: uppercase;
 }
 
 .text-center {
