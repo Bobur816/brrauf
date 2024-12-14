@@ -430,7 +430,7 @@ input[type=radio]:checked::before {
   color: var(--color-white);
 }
 
-@-webkit-keyframes pulse-white {
+@keyframes pulse-white {
   0% {
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
@@ -1431,7 +1431,7 @@ input[type=radio]:checked::before {
   height: 0.25rem;
   background: none;
   pointer-events: none;
-  -webkit-appearance: none;
+  --webkit-appearance: none;
 }
 .filter-prices .range-input input::-webkit-slider-thumb {
   -webkit-appearance: none;
